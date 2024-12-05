@@ -31,11 +31,11 @@ Ini adalah contoh latihan create dan read dari database menggunakan laravle 11
 
 4. migrasi database:
     ```bash
-        php artisan migrate
+    php artisan migrate
     ```
 
 jalankan aplikasi seperti biasa
 
 ```bash
-    php artisan serve
+php artisan serve
 ```
