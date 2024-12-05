@@ -26,6 +26,9 @@ Ini adalah contoh latihan create dan read dari database menggunakan laravle 11
 
     ```bash
     composer install
+    ```
+
+    ```bash
     php artisan key:generate
     ```
 
