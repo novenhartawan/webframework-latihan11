@@ -10,6 +10,11 @@
             'name' => 'Students',
             'activePath' => 'students*',
         ])
+        @include('layout.nav-item', [
+            'url' => '/users',
+            'name' => 'Users',
+            'activePath' => 'users*',
+        ])
     </ul>
     <hr>
     <div class="dropdown">

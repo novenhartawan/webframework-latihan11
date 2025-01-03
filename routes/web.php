@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StudentsController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
@@ -22,6 +23,21 @@ Route::middleware(['auth'])->group(function () {
             Route::put('/{student}', 'update');
 
             Route::delete('/{student}', 'destroy');
+
+            Route::post('/', 'store');
+        });
+
+    Route::prefix('/users')
+        ->controller(UsersController::class)
+        ->group(function () {
+            Route::get('/', 'index');
+            Route::get('/create', 'create');
+            Route::get('/{user}', 'show');
+
+            Route::get('/{user}/edit', 'edit');
+            Route::put('/{user}', 'update');
+
+            Route::delete('/{user}', 'destroy');
 
             Route::post('/', 'store');
         });
